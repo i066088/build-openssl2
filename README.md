@@ -19,17 +19,25 @@ Navigate to the directory and generate the VS2010 solution with cmake.
 [ For WIN 32 bit ]
 
 cd %workspace%\OpenSSL\src\openssl
+
 perl Configure VC-WIN32 no-asm no-rc5 --prefix=%workspace%\OpenSSL\WIN32
+
 ms\do_ms
+
 nmake -f ms\ntdll.mak
+
 nmake -f ms\ntdll.mak install
 
 [ For WIN 64 bit ]
 
 cd %workspace%\OpenSSL\src\openssl
+
 perl Configure VC-WIN64A no-asm no-rc5 --prefix=%workspace%\OpenSSL\WIN64
+
 ms\do_win64a
+
 nmake -f ms\ntdll.mak
+
 nmake -f ms\ntdll.mak install
 
 More details, please see: http://blog.csdn.net/henter/article/details/8364532
